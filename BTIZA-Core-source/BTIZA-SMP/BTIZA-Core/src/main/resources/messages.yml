@@ -1,0 +1,13 @@
+# BTIZA-Core messages. MiniMessage formatting is supported.
+# Placeholders look like {name}. Player-supplied values are escaped automatically.
+
+economy:
+  success: "<green>Done."
+  insufficient-funds: "<red>You do not have enough money for that."
+  invalid-amount: "<red>That amount is not valid."
+  limit-exceeded: "<red>That amount is above the allowed limit."
+  self-transfer: "<red>You cannot send money to yourself."
+  database-error: "<red>The economy is temporarily unavailable. Please try again."
+
+protection:
+  denied: "<red>You cannot do that here."

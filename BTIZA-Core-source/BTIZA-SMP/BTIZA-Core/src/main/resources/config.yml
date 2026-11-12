@@ -1,0 +1,30 @@
+# BTIZA-Core configuration
+# Shared by every BTIZA plugin.
+# Changes to economy and owner values apply after /btiza reload (once BTIZA-Tools is installed)
+# or after a restart. Protection changes require a restart.
+
+currency:
+  # Symbol placed before money values.
+  symbol: "$"
+  # Digits after the decimal point in compact values (1.5K, 2.25M). Range 0-4.
+  decimals: 2
+
+economy:
+  # Balance a brand-new player receives on first join.
+  starting-balance: 0
+  # Highest balance any account can reach.
+  max-balance: 1000000000000000
+  # Largest single pay, deposit, or withdrawal.
+  max-transaction: 1000000000000
+
+owner:
+  # Your Minecraft username (display only).
+  name: awmgy
+  # Your Minecraft UUID. Required for the permanent Owner rank.
+  # Accepted with or without dashes. Leave blank until you add it.
+  uuid: ""
+
+protection:
+  # Use WorldGuard region checks when WorldGuard is installed.
+  # If a check fails with an error, the action is denied and the error is logged once.
+  worldguard: true

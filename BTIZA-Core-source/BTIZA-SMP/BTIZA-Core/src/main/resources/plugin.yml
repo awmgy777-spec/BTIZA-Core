@@ -1,0 +1,10 @@
+name: BTIZA-Core
+version: 1.0.0
+main: net.btiza.core.BtizaCore
+api-version: '1.21'
+author: awmgy
+description: Shared database, economy service, GUI framework and protection hooks for BTIZA SMP.
+website: https://play.btiza.net
+softdepend: [WorldGuard]
+libraries:
+  - org.xerial:sqlite-jdbc:3.47.1.0
