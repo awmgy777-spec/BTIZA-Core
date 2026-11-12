@@ -1,0 +1,31 @@
+
+name: Build BTIZA plugins
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Build and test all modules
+        run: mvn -B -ntp clean verify
+
+      - name: Upload compiled JARs
+        uses: actions/upload-artifact@v4
+        with:
+          name: btiza-jars
+          path: '**/target/BTIZA-*.jar'
+          if-no-files-found: error
