@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -21,11 +22,12 @@ jobs:
           cache: maven
 
       - name: Build and test all modules
-        run: run: mvn -B -ntp -f BTIZA-SMP/pom.xml clean verify
+        run: mvn -B -ntp -f BTIZA-SMP/pom.xml clean verify
 
       - name: Upload compiled JARs
         uses: actions/upload-artifact@v4
         with:
           name: btiza-jars
-          path: '**/target/BTIZA-*.jar'
+          path: '**/target/*.jar'
           if-no-files-found: error
+
