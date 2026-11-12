@@ -21,7 +21,7 @@ jobs:
           cache: maven
 
       - name: Build and test all modules
-        run: mvn -B -ntp clean verify
+        run: run: mvn -B -ntp -f BTIZA-SMP/pom.xml clean verify
 
       - name: Upload compiled JARs
         uses: actions/upload-artifact@v4
